@@ -1,0 +1,298 @@
+.App {
+  /* text-align: center; */
+  background-color: #b8ebf9b4;
+  
+}
+
+.App-logo {
+  height: 10vmin;
+  pointer-events: none;
+}
+.logo {
+  height: 9vmin;
+  margin: 5px 1px 0 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-image: url('../public/img/sneaker.png');
+  background-color: rgba(128, 128, 128, 0.431);
+  height: 11vh;
+  display: flexbox;
+  align-items: center;
+  
+  font-size: calc(30px + 1vmin);
+  font-weight: 900;
+  color: black;
+}
+
+.head{
+  float: left;
+  display: inline-flex;
+  cursor: pointer;
+}
+.menu{
+  float: right;
+}
+.menu li{
+  display: inline;
+  list-style: none;
+  margin: 12px;
+  cursor: pointer;
+  transition: opacity 400ms ease-in-out;
+}
+.menu li:hover{
+  opacity: 0.4;
+}
+
+.cartBtn.openned{
+  color: rgb(1, 103, 1);
+}
+
+.cart{
+  position: absolute;
+  top: 100px;
+  left: 60%;
+  width: 35%;
+  padding: 5px;
+  background-color: rgb(251, 243, 233);
+  z-index: 1;
+  box-shadow: 10px 5px 20px -5px black;
+}
+
+.cartItem{
+  width: 100%;
+}
+.cartItem img{
+  /* align-self: auto; */
+  margin-bottom: 10px;
+  width: 80px;
+  margin-right: 20px;
+}
+.cartItem h3, b, .deletecartItem{
+  display: inline;
+  font-size: small;
+  float: none;
+}
+.deletecartItem{
+  margin-left: 5px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.deletecartItem:hover{
+  
+  opacity: 1;
+}
+.cartItem h3{
+  margin-right: 10%;
+  margin-left: 5%;
+}
+.clear-cart{
+  cursor: pointer;
+  border: solid 1px black;
+  width: 100px;
+  padding: 4px;
+}
+.clear-cart:hover{
+  background-color: rosybrown;
+  transform: scale(1.1);
+}
+.cart-quantity{
+  position: relative;
+  top: -12px;
+  opacity: 0.75;
+}
+
+.products{
+  display: flex;
+  column-count: 3;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.product{
+  margin: 10px;
+  padding: 7px;
+  background: #61dafb81;
+  transition: transform 300ms;
+  position: relative;
+}
+.product > img{
+  cursor: pointer;
+}
+.product h3{
+  font-size: small;
+}
+.product:hover{
+  transform: scale(1.07);
+}
+.product #add{
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  line-height: 25px;
+  float: right;
+  text-align: center;
+  cursor: pointer;
+}
+.product #add:hover{
+  background-color: rgba(0, 0, 255, 0.589);
+}
+
+.one-product{
+  z-index: 60;
+  width: 500px;
+  background-color: rgb(252, 244, 235);
+  margin: 10px;
+  position: fixed;
+  top: 15%;
+  left: calc(20% + 10vw);
+  text-align: center;
+}
+.one-product > img{
+  width: 500px;
+}
+.one-product > b{
+  font-size: x-large;
+}
+.one-product > div#add{
+  cursor: pointer;
+}
+.one-product > div#add:hover{
+  transform: scale(1.2);
+}
+
+.back-window-out{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 40;
+  overflow: auto;
+}
+.auth-window{
+  color: white;
+  position: fixed;
+  top: 40vh; 
+  left: 37vw;
+  z-index: 50;
+  width: 250px;
+  height: 200px;
+  background-color: rgba(137, 43, 226, 0.576);
+  border: solid 4px black;
+  text-align: center;
+  padding: 10px;
+}
+.btn-auth{
+  background-color: white;
+  border-radius: 10px;
+}
+.btn-auth:hover{
+  background-color: rgb(92, 126, 92);
+}
+.auth-close{
+  position: absolute;
+  left: 225px;
+  top: -2px;
+  cursor: pointer;
+}
+.auth-error{
+  color: rgb(254, 46, 46);
+  font-weight: 700;
+  font-size: small;
+}
+
+.btn-logout{
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+}
+.btn-logout:hover{
+  transform: scale(1.2);
+}
+
+.table-header{
+  font-size: xx-large;
+  font-weight: 800;
+  display: inline-flex;
+}
+.table-header > p{
+  position: relative;
+  top: -2px;
+  left: 20px;
+  cursor: pointer;
+}
+.table-header > p:hover{
+  transform: scale(1.3);
+}
+.table-img{
+  width: 50px;
+}
+
+.info-window{
+  /* justify-self: center; */
+  top: 200px;
+  left: 35vw;
+  height: 500px;
+  width: 500px;
+  background-color: #49b1e98c;
+}
+.info-header{
+  font-size: xx-large;
+  font-weight: 600;
+  color: #132e62;
+}
+.info-tech{
+  color: antiquewhite;
+  font-size: x-large;
+  font-weight: 700;
+}
+.info-text{
+  font-size: 30px;
+  color: aquamarine;
+}
+.info-text-name{
+  font-size: 30px;
+  color: white;
+}
+.info-text2{
+  font-size: 20px;
+}
+.auth-close2{
+  left: 475px;
+}
+
+
+.App-footer {
+  background-color: #1f3560;
+  min-height: 7vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(7px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
